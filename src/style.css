@@ -1,0 +1,312 @@
+/* App.css */
+
+.app {
+	display: flex;
+	height: 100vh;
+}
+
+.sideNav {
+	width: 230px;
+	background-color: black;
+	color: white;
+	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: fixed;
+	height: 100vh;
+}
+
+.company-name h2 {
+	margin-bottom: 60px;
+	margin-top: 5px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.menu {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 10px;
+}
+
+.menu-item {
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	background-color: white;
+	border-bottom: 1px solid #444;
+	border-radius: 10px;
+}
+
+.menu-item a {
+	color: black;
+	text-decoration: none;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.menu-item:hover {
+	box-shadow: 0px 6px 12px rgba(1, 1, 1, 0.3);
+}
+
+.menu-item i {
+	padding-right: 10px;
+	font-size: 20px;
+}
+
+.tableContainer {
+	margin-left: 250px;
+	padding: 20px;
+	flex-grow: 1;
+}
+
+.tableContainer h1 {
+	font-size: 32px;
+	color: #333;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.add-item-btn {
+	position: absolute;
+	right: 50px;
+	top: 90px;
+	padding: 10px 20px;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease-in-out;
+}
+
+.add-item-btn i {
+	margin-right: 10px;
+}
+
+.add-item-btn:hover {
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+	transform: scale(1.05);
+}
+
+.filter-Conatiner,
+.sort-container {
+	margin-bottom: 15px;
+	font-size: 15px;
+	padding: auto;
+	width: 120px;
+	height: 30px;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-left: 20px;
+}
+
+.filter-Conatiner:hover,
+.sort-container:hover {
+	background-color: #444;
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Styling */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+th,
+td {
+	padding: 9px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	transition: background-color 0.3s ease-in-out;
+	position: relative;
+}
+
+th {
+	background-color: #f4f4f4;
+	font-weight: bold;
+}
+
+tr:hover {
+	background-color: #f4f4f4;
+	border-radius: 10px;
+	box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Edit and Remove Buttons */
+.edit-btn,
+.remove-btn {
+	padding: 10px 15px;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.edit-btn:hover,
+.remove-btn:hover {
+	transform: scale(1.05);
+}
+
+.remove-btn {
+	margin-left: 10px;
+}
+
+/* Low Priority Label */
+.low {
+	background-color: #ff8a8a;
+	padding: 2px 5px;
+	border-radius: 10px;
+	color: #ff2400;
+	font-size: 10px;
+	top: 0;
+	margin-right: 5px;
+}
+
+/* Error messages */
+.error {
+	color: red;
+	font-size: 14px;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+	display: none;
+	position: absolute;
+	background-color: white;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	z-index: 10;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 5px 0;
+	min-width: 120px;
+}
+
+.dropdown-menu-item {
+	padding: 8px 12px;
+	cursor: pointer;
+}
+
+.dropdown-menu-item:hover {
+	background-color: #f4f4f4;
+}
+
+/* Show Dropdown when hovered or focused */
+td:hover .dropdown {
+	display: block;
+}
+
+/* Modal Overlay (Blur Effect) */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(8px);
+	/* Background blur */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10000;
+	/* Increase if necessary */
+	/* Ensure it appears above other content */
+}
+
+/* Modal Content */
+.modal-content {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	width: 400px;
+	text-align: center;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+	position: relative;
+	opacity: 1;
+	/* Ensure opacity is not 0 */
+	animation: fadeIn 0.3s forwards;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+/* Form Styles */
+.modal-content form {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.modal-content label {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.modal-content input {
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 95%;
+}
+
+.modal-actions {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.submit-btn,
+.cancel-btn {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.submit-btn {
+	background-color: black;
+	color: white;
+}
+
+.cancel-btn {
+	background-color: #dc3545;
+	color: white;
+}
+
+.submit-btn:hover {
+	background-color: #333;
+}
+
+.cancel-btn:hover {
+	background-color: #c82333;
+}
+
+/* Table Content */
+.table-container {
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.table-container.blur {
+	opacity: 0.3;
+	/* Apply blur effect on table content */
+	filter: blur(4px);
+}

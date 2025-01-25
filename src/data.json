@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"name": "Laptop",
+		"category": "Electronics",
+		"quantity": 8,
+		"price": 1200,
+		"description": "15-inch business laptop with 16GB RAM."
+	},
+	{
+		"id": 2,
+		"name": "Office Chair",
+		"category": "Furniture",
+		"quantity": 25,
+		"price": 150,
+		"description": "Ergonomic office chair with lumbar support."
+	},
+	{
+		"id": 3,
+		"name": "Notebook",
+		"category": "Stationery",
+		"quantity": 5,
+		"price": 5,
+		"description": "100-page spiral notebook for office use."
+	},
+	{
+		"id": 4,
+		"name": "Smartphone",
+		"category": "Electronics",
+		"quantity": 15,
+		"price": 699,
+		"description": "Latest 5G smartphone with 128GB storage."
+	},
+	{
+		"id": 5,
+		"name": "Desk Lamp",
+		"category": "Furniture",
+		"quantity": 9,
+		"price": 40,
+		"description": "Adjustable LED desk lamp with touch controls."
+	},
+	{
+		"id": 6,
+		"name": "Headphones",
+		"category": "Electronics",
+		"quantity": 30,
+		"price": 80,
+		"description": "Wireless noise-canceling over-ear headphones."
+	}
+]
